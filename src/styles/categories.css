@@ -1,0 +1,53 @@
+.main-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+.catpost-container
+{
+    width: 663px;
+    display: inline-block;
+}
+.head-container
+{
+    margin-left: 3%;
+    width: fit-content;
+}
+.head
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size:40px;
+}
+.head-hr
+{
+    height: 3px;
+    width: 50%;
+    background-color: #F08080;
+    border: 0;
+    margin:0;
+}
+.load-more
+{
+    color: #F08080;
+    display: inline-block;
+    margin-left:5%;
+    cursor: pointer;
+}
+.load-more-span
+{
+    color: #A2A2A2;
+    display: inline;
+    cursor: pointer;
+}
+.right
+{
+    display: inline-block;
+    margin-top: -7.7%;
+}
+@media only screen and (max-width:768px)
+{
+    .main-container
+    {
+        flex-direction: column;
+    }
+}

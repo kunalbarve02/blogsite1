@@ -1,0 +1,36 @@
+.topPost
+{
+    margin-top: 5%;
+    width: 430px;
+}
+.topPost-main-img
+{
+    width: 350px;
+    height: 300px;
+}
+.topPost-sec
+{
+    width: 430px;
+}
+.topPost-sec-img
+{
+    width: 100px;
+    height: 100px;
+}
+.topPost-sec-text-container
+{
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    height: 100px;
+    text-align: start;
+    font-family: 'Montserrat', sans-serif;
+}
+@media only screen and (max-width:768px)
+{
+    .topPost-sec-text-container
+    {
+        width: 65%;
+        font-size: 15px;
+    }
+}

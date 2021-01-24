@@ -1,0 +1,53 @@
+.mobnav-container
+{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.mobnav-logo-container
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height: fit-content;
+}
+.mobnav-logo-the
+{
+    font-size: 19px;
+    transform: rotate(-90deg);
+    font-family: 'Montserrat', sans-serif;
+}
+.mobnav-logo-siren
+{
+    font-size: 44px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.mobnav-nav-logo
+{
+    height: 30px;
+    width: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+}
+.mobnav-nav
+{
+    border-bottom: 4px solid black;
+    height: 5px;
+    width: 40px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+@media only screen and (max-width:768px)
+{
+    .mobnav-container
+    {
+        width: 95%;
+    }
+}

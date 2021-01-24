@@ -1,0 +1,85 @@
+.cat-posts
+{
+    width: 663px;
+    display: flex;
+}
+.cat-posts-img
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.cat-posts-text-container
+{
+
+    align-content: space-around;
+    justify-content: space-between;
+    margin :auto;
+    margin-left: 4%;
+    margin-top: 5%;
+    width: 400px;
+    font-family: 'Montserrat', sans-serif;
+}
+.cat-posts-text-head
+{
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #404040;
+    word-wrap: break-word;
+}
+.cat-posts-text
+{
+    font-size: 13px;
+    color: #908D8D ;
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+}
+.cat-posts-category
+{
+    display: inline-block;
+    color: #404040;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+.cat-posts-date
+{
+    display: inline;
+    color: #404040;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+@media only screen and (max-width:768px)
+{
+    .cat-posts
+    {
+        width: 60%;
+        margin-bottom: 4%;
+        margin-top: 5%;
+        padding: 2px;
+        border: 0.5px solid lightgray;
+        justify-content: space-around;
+    }
+    .cat-posts-img
+    {
+        width: 31%;
+        
+    }
+    .cat-posts-text-container
+    {
+        width: 50%;
+        height: 50%;
+    }
+    .cat-posts-text-head
+    {
+        font-size: 17px;
+    }
+    .cat-posts-text
+    {
+        font-size: 12px;
+    }
+    .cat-posts-date,.cat-posts-category
+    {
+        font-size: 12px;
+    }
+}

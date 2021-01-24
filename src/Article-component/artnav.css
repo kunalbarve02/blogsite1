@@ -1,0 +1,256 @@
+.art-nav-container
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 70px;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.16);
+    padding: 5px;
+}
+.article-logo 
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height: fit-content;
+}
+.article-logo-the
+{
+    font-size: 19px;
+    transform: rotate(-90deg);
+    font-family: 'Montserrat', sans-serif;
+}
+.article-logo-siren
+{
+    font-size: 44px;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+.get-started-btn
+{
+    height: 37px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    border: 1px solid #03A87C;
+    color: #03A87C;
+    cursor: pointer;
+    align-content: center;
+    font-size: 15px;
+}
+.get-started-btn:hover
+{
+    background-color: #03A87C;
+    color: white;
+    transition: 0.7s;
+}
+.clap-share
+{
+    position: sticky;
+    right: 90%;
+    top: 50%;
+    height: fit-content;
+    width: 250px;
+}
+.article
+{
+    margin-right: 7%;
+}
+.article-container
+{
+    margin: auto;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+}
+.article-heading
+{
+    font-size: 40px;
+    font-family: 'Amiri', serif;
+    font-weight: 560;
+}
+.article-info
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.author-info
+{
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+}
+.date 
+{
+    color: rgba(162, 162, 162, 1);
+}
+.share
+{
+    display: flex;
+    height: fit-content;
+    width: 150px;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+.fa 
+{
+    padding: 7.5px;
+    font-size: 15px;
+    width: 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: lightgray;
+    color: black;
+}
+.fa:hover {
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.fa-facebook:hover
+{
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter:hover
+{
+    background: #55ACEE;
+    color: white;
+}
+.fa-instagram:hover
+{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+.fa-youtube:hover
+{
+    background: #bb0000;
+    color: white;
+}
+.article-img
+{
+    width: 100%;
+    height: 370px;
+    margin-top: 10%;
+    border-radius: 7px;
+}
+.article-content
+{
+    word-wrap: break-word;
+    width: 600px;
+    font-family: 'Amiri', serif;
+    font-weight: 580;
+}
+.content-image
+{
+    width: 100%;
+    height: 701px;
+}
+.artticle-footer
+{
+    width: 100%;
+}
+.tag-list
+{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 333.5px;
+    font-family: 'Open Sans', sans-serif;
+}
+.tag 
+{
+    color: #A2A2A2;
+    background-color: #F2F2F2;
+    width: fit-content;
+}
+.clap 
+{
+    display: flex;
+    width: fit-content;
+    margin-top: 20px;
+}
+.clap-btn
+{
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+}
+.clap-count
+{
+    color: #939393;
+    display: inline-block;
+}
+.footer-author
+{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.suggestion
+{
+    margin-top: 15%;
+}
+.sugg-text
+{
+    font-size:22px;
+    margin-left: 4%;
+}
+.suggestion-article-container
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.sugg
+{
+    width: 250px;
+}
+
+.clap-icon
+{
+    background-color: white;
+}
+@media only screen and (max-width:768px)
+{
+    .clap-share
+    {
+        display:none
+    }
+    .article-container
+    {
+        width: 150%;
+    }
+    .article-heading
+    {
+        font-size: 28px;
+    }
+    .article-info
+    {
+        flex-direction: column-reverse;
+        align-content: space-between;
+        height: 9%;
+    }
+    .article-img,.article-content,.content-image
+    {
+        width:72%;
+    }
+    .tag-list
+    {
+        margin-top: 2%;
+        width: 55%;
+    }
+    .suggestion-container 
+    {
+        margin-top: 20%;
+    }
+    .suggestion-article-container
+    {
+        flex-direction: column;
+    }
+    #sugg
+    {display: none;}
+
+}

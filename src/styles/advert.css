@@ -1,0 +1,21 @@
+.advertisement
+{
+    border: 1.5px solid black;
+    width: 300px;
+    height: 659px;
+    text-align: center;
+    margin-top: 35%;
+}
+.advertisement-text
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 500; 
+}
+@media only screen and (max-width:768px)
+{
+    .advertisement
+    {
+        display:none
+    }
+}
