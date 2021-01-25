@@ -5,7 +5,7 @@ import logo from './Home/Pictures/logo.jpg'
  const navList=[
     {
         name: 'Home',
-        path:'/The-Siren',
+        path:'/home',
     },
     {
         name: 'Bollywood',

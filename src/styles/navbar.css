@@ -41,7 +41,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 0px 3px rgba(0, 0, 0, 0.16);
     padding-bottom: 0;
 }
 .nav-active

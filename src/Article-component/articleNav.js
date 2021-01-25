@@ -4,7 +4,7 @@ const ArticleNav =()=>{
     return( 
         <>
             <div className="art-nav-container">
-                <div classname="article-logo">
+                <div className="article-logo">
                     <h2 className="article-logo-the">The</h2>
                     <h1 className="article-logo-siren">Siren</h1>   
                 </div>
