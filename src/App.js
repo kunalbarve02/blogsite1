@@ -25,6 +25,7 @@ class App extends Component{
   componentDidMount(){
     console.log(this.state)
     window.addEventListener("resize",()=>{this.setState({width:window.innerWidth,height:window.innerHeight})})
+    //when window resizes device-width in state updates 
   }
   
 
@@ -32,7 +33,8 @@ class App extends Component{
     return(
       <>
           <BrowserRouter>
-          {this.state.width<728 ?  <MobNav/>:<Navbar/>}
+          {this.state.width<768 ?  <MobNav/>:<Navbar/>} {/* If device width is less than 768 mobile nav renders
+                                                        if it is greater than 768 normal navbar renders*/}
               <Switch>
                   <Route path="/bollywood" component={Bolly} />
                   <Route path="/hollywood" component={Holly} />

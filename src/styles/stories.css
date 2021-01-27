@@ -29,6 +29,10 @@
 }
 @media only screen and (max-width:768px)
 {
+    .stories
+    {
+        width: 98%;
+    }
     .stories-text-container
     {
         width: 95%;

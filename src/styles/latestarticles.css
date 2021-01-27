@@ -52,18 +52,18 @@
         padding: 10px;
         border: 0.5px solid lightgray;
         justify-content: space-around;
+        height: 225px;
         
     }
     .latest-article-img
     {
         width: 41%;
-        
     }
     .latest-article-text-container
     {
         width: 60%;
         height: 50%;
-        margin-left: 3%;
+        margin-left: 4%;
     }
     .latest-article-text-head
     {

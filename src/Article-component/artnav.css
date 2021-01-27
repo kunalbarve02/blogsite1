@@ -237,6 +237,10 @@
     {
         width:72%;
     }
+    .article-img
+    {
+        height: 15%;
+    }
     .tag-list
     {
         margin-top: 2%;
@@ -244,7 +248,7 @@
     }
     .suggestion-container 
     {
-        margin-top: 20%;
+        margin-top: 35%;
     }
     .suggestion-article-container
     {

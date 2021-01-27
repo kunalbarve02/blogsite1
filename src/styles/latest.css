@@ -46,7 +46,7 @@
 {
     .latest-container
     {
-        width: 26%;
+        width: 24%;
         margin-bottom: 4%;
         padding: 10px;
         border: 0.5px solid lightgray;
@@ -63,5 +63,6 @@
     .latest-text
     {
         font-size:14px;
+        width: 90%;
     }
 }
