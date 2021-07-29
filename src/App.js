@@ -1,15 +1,10 @@
 import React,{Component} from 'react'
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
-import { matchPath } from "react-router";
 import Navbar from './components/navbar'
 import MobNav from './components/mobileNav'
 import Home from './components/Home/Home'
-import Bolly from './components/categories/bollywood'
-import Holly from './components/categories/hollywood'
-import Tech from './components/categories/technology'
-import Fit from './components/categories/fitness'
-import Food from './components/categories/food'
 import Article from './Article-component/article';
+import Categorypage from './components/categories/categorypage';
 
 
 
@@ -20,7 +15,7 @@ class App extends Component{
   state={
     isNavbarVisible:true,
     width:window.innerWidth,
-    height:window.innerHeight
+    height:window.innerHeight,
   }
   componentDidMount(){
     console.log(this.state)
@@ -33,17 +28,14 @@ class App extends Component{
     return(
       <>
           <BrowserRouter>
-          {this.state.width<768 ?  <MobNav/>:<Navbar/>} {/* If device width is less than 768 mobile nav renders
+            {this.state.width<768 ?  <MobNav/>:<Navbar/>} {/* If device width is less than 768 mobile nav renders
                                                         if it is greater than 768 normal navbar renders*/}
-              <Switch>
-                  <Route path="/bollywood" component={Bolly} />
-                  <Route path="/hollywood" component={Holly} />
-                  <Route path="/technology" component={Tech} />
-                  <Route path="/fitness" component={Fit}/>
-                  <Route path="/food" component={Food}/>
-                  <Route path="/article" component={Article}/>
-                  <Route path="/home" component={Home} exact/>
-              </Switch>
+              {console.log(this.state.navbar_data)}
+                  <Switch>
+                    <Route path="/The-Siren/:category" component={Categorypage} exact/>
+                    <Route path="/The-Siren/:category/:id" component={Article} exact/>
+                    <Route path="/" component={Home} exact/>
+                  </Switch>
           </BrowserRouter>
       </>
     )

@@ -1,19 +1,35 @@
 import '../../styles/vg2.css'
-import vg2 from './Pictures/img.jpg'
+
+import axios from 'axios'
+import {useEffect,useState} from 'react';
 
 const Vert2 = ()=>
 {
+    const [vertgall,setvertgall]=useState([])
+    useEffect(()=>{
+        axios.get('https://blogsitebackend.herokuapp.com/get_verticalgallery')
+        .then((res)=>{
+            setvertgall(res.data)
+            console.log(res.data)
+        })
+        .catch((err)=>{
+            alert(err.message)
+        })
+    },[])
     return (
         <>
-            <div className="vg2">
-                <img src={vg2} className="vg2-img" alt=""/>
-            <div className="vg2-text-container">
-                <h3 className="vg2-text">
-                    Title of vertical Gallery
-                </h3>
-                    <p className="vg2-category">Travel/ August 21 2017</p>
+            {vertgall.map((item)=>(
+                <div className="vg2">
+                    <img src={item.img} className="vg2-img" alt=""/>
+                    <div className="vg2-text-container">
+                        <h3 className="vg2-text">
+                            {item.heading}
+                        </h3>
+                        <p className="vg2-category">{item.category}/ {item.date}</p>
+                    </div>
                 </div>
-            </div>
+            ))}
+            
         </>
     )
 }

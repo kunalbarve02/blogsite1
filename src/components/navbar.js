@@ -1,35 +1,23 @@
+import axios from 'axios'
+import {useEffect,useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import '../styles/navbar.css'
 import logo from './Home/Pictures/logo.jpg'
 
- const navList=[
-    {
-        name: 'Home',
-        path:'/home',
-    },
-    {
-        name: 'Bollywood',
-        path:'/bollywood',
-    },
-    {
-        name: 'Hollywood',
-        path:'/hollywood',
-    },
-    {
-        name: 'Technology',
-        path:'/technology',
-    },
-    {
-        name: 'Fitness',
-        path:'/fitness',
-    },
-    {
-        name: 'Food',
-        path:'/food',
-    }
- ]
+
 
 const Navbar =()=>{
+    const [navList,setnavList]=useState([])
+    useEffect(()=>{
+        axios.get('https://blogsitebackend.herokuapp.com/navbar')
+        .then((response)=>{
+            setnavList(response.data.list)
+            console.log(navList)
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    },[])
     return(
         <div className="navbar">
         <div className="logo-container">

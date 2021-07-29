@@ -6,6 +6,7 @@
     margin-left: 13%;
     display: flex;
     margin-top: 8%;
+    justify-content: space-around;
 }
 .primary-container
 {
@@ -17,7 +18,7 @@
 }
 .primary-img
 {
-    width: 100%;
+    width: 400%;
     height: 100%;
     border-radius: 5px;
 }
@@ -63,6 +64,7 @@
 {
     position: absolute;
     top: 70%;
+    width: 312px;
 }
 #txt2
 {

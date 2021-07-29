@@ -1,36 +1,55 @@
 import '../../styles/Vertgallery.css'
-import img1 from './Pictures/img.jpg'
-import img2 from './Pictures/img2.jpg'
+
+import axios from 'axios'
+import {useEffect,useState} from 'react';
+import { Link } from 'react-router-dom';
 
 const Vertgallery = ()=>{
+    const [vertgallery1,setvertgallery1]=useState([])
+    const [vertgallery2,setvertgallery2]=useState([])
+    useEffect(()=>{
+        axios.get('https://blogsitebackend.herokuapp.com/get_verticalgallery1')
+        .then((res)=>{
+            setvertgallery1(res.data)
+        })
+        .catch((err) => {
+            alert(err.message)
+        })
+        axios.get('https://blogsitebackend.herokuapp.com/get_verticalgallery2')
+        .then((res)=>{
+            setvertgallery2(res.data)
+        })
+        .catch((err) => {
+            alert(err.message)
+        })
+    },[])
     return(
         <div className="container">
-            <div className="primary-container">
-                <img src={img1} alt="" className="primary-img"/>
-                <div className="text-block-1">
-                    <h3 className="img1-heading">Title of vertical gallery</h3>
-                    <h5 className="img1-category">Travel / August 21 2017</h5>
-                </div>
-            </div>
+            {vertgallery1.map((item)=>(
+                <Link to={`/The-Siren/${item.category.toLowerCase()}/${item.id.toLowerCase()}`} exact style={{ textDecoration: 'none', color:"black"}}>
+                    <div className="primary-container">
+                        <img src={item.img} alt="" className="primary-img"/>
+                        <div className="text-block-1">
+                            <h3 className="img1-heading">{item.heading}</h3>
+                            <h5 className="img1-category">{item.category} / {item.posted_on}</h5>
+                        </div>
+                    </div>
+                </Link>
+            ))}
             <div className="sec-parent">
-                <div className="secondary-container">
-                    <img src={img2}alt="" className="sec-img"/>
-                    <div className="text-block-2"  id="txt1">
-                        <h3 className="img1-heading">The Sound cloud</h3>
-                        <h3 className="img1-heading">You loved is doomed</h3>
-                        <h5 className="img1-category">Travel / August 21 2017</h5>
-                    </div>
-                </div>
-                <div className="secondary-container" >
-                    <img src={img2} alt="" className="sec-img"/>
-                    <div className="text-block-2" id="txt2">
-                        <h3 className="img1-heading">The Sound cloud</h3>
-                        <h3 className="img1-heading">You loved is doomed</h3>
-                        <h5 className="img1-category">Travel / August 21 2017</h5>
-                    </div>
-                </div>
-            </div>
-            
+                {console.log(vertgallery2)}
+                {vertgallery2.map((item,index)=>(
+                    <Link to={`/The-Siren/${item.category.toLowerCase()}/${item.id.toLowerCase()}`} exact style={{ textDecoration: 'none', color:"black"}}>
+                        <div className="secondary-container" >
+                            <img src={item.img} alt="" className="sec-img"/>
+                            <div className="text-block-2" id={`txt${index+1}`}>
+                                <h3 className="img1-heading">{item.heading}</h3>
+                                <h5 className="img1-category">{item.category} / {item.posted_on}</h5>
+                            </div>
+                        </div>
+                    </Link>
+                ))}                
+                </div>  
         </div>
     )
 }

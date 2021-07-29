@@ -1,25 +1,38 @@
 import { Link } from 'react-router-dom';
-import suggImg from '../components/Home/Pictures/latest-article.jpg'
-import authorImg from './Mask Group 21.png'
-
+import axios from 'axios'
+import {useEffect,useState} from 'react';
 const Suggestions =()=>{
+    const [suggestion,setSuggestion]=useState([])
+    useEffect(()=>{
+        axios.get('https://blogsitebackend.herokuapp.com/get_suggestions')
+        .then((res)=>{
+            console.log(res.data)
+            setSuggestion(res.data)
+        })
+        .catch((err)=>{
+            alert(err.message)
+        })
+    },[])
     return( 
-        <Link to="/article" exact style={{ textDecoration: 'none', color:"black"}}>
-            <div className="suggestion-article">
-                    <p className="date">Also tagged in ReactJs</p>
-                    <img src={suggImg} alt="latest-article"/>
+    <>
+        {suggestion.map((item)=>(
+            <Link to={`/The-Siren/${item.category.toLowerCase()}/${item.id.toLowerCase()}`} exact style={{ textDecoration: 'none', color:"black"}}>
+                <div className="suggestion-article">
+                    <img src={item.img} alt="latest-article"/>
                     <div className="suggestion-head">
-                        <h3>Joshua Tree Overnight Adventure</h3>
+                        <h3>{item.heading}</h3>
                         <div className="footer-author" id="sugg">
-                            <img src={authorImg} alt="Author" className="auth-img"/>
+                            <img src={item.author_img} alt="Author" className="auth-img"/>
                             <div className="auth-name-container">
-                                <p className="auth-name">Dmitry Nozhenko</p>
-                                <p className="date">Jan 28, 2019 · 10 min read</p>
+                                <p className="auth-name">{item.author}</p>
+                                <p className="date">{item.date}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-        </Link>
+            </Link>
+        ))}
+    </>
     )
 }
 export default Suggestions

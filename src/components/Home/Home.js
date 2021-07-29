@@ -7,9 +7,6 @@ import Advert from "./advertisement";
 import Toppost from "./topposts";
 import Stories from './stories';
 
- const arr3=[1,2,3]
- const arr5=[1,2,3,4,5]
-
 const Home =(props)=>{
     return (
         <div className="master-conteiner">
@@ -19,9 +16,7 @@ const Home =(props)=>{
                 <hr className="latest-hr"/>
             </div>
             <div className="latest">
-                {arr3.map((item)=>(<Latest/>))}
-                
-                {console.log(props.deviceWidth)}
+                <Latest/>
             </div>
             <div className="lr-container">
                 <div className="left">
@@ -30,7 +25,7 @@ const Home =(props)=>{
                         <hr className="latest-hr"/>
                     </div>
                     <div className="latest-articles">
-                    {arr5.map((item)=>(<Articles/>))} 
+                     <Articles/>
                         <div className="load-more-container">
                             <p className="load-more"> &#8595; </p><p className="load-more-text">LOAD MORE</p>
                         </div>
@@ -51,7 +46,7 @@ const Home =(props)=>{
                 <hr className="latest-hr"/>
             </div>
             <div className="stories-container">
-            {arr3.map((item)=>(<Stories/>))}
+            <Stories/>
             </div>
         </div>
     )

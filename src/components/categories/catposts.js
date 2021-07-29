@@ -1,23 +1,22 @@
 import { Link } from 'react-router-dom';
 import '../../styles/catpost.css'
-import pic from '../Home/Pictures/latest.jpg'
 
-const Catposts = ()=>{
+const Catposts = (props)=>{
     return(
-            <Link to="/article" exact style={{ textDecoration: 'none', color:"black"}}>
+            <Link to={`${props.categoryData.category.toLowerCase()}/${props.categoryData.id}`} exact style={{ textDecoration: 'none', color:"black"}}>
                 <div className="cat-posts">
-                    <img src={pic} className="cat-posts-img" alt=""/>
+                    <img src={props.categoryData.img} className="cat-posts-img" alt={props.categoryData.heading+"image"}/>
                     
                     <div className="cat-posts-text-container"> 
-                        <h4 className="cat-posts-text-head">Catch waves with an adventure guide</h4>
+                        <h4 className="cat-posts-text-head">{props.categoryData.heading}</h4>
                         <p className="cat-posts-text">
-                            Gujarat is vastly underrated and it’s a mystery to us why the region isn’t more well-known as a tourist destination. It has a plethora of temples and palaces
+                            {props.categoryData.desc}
                         </p>
                         <p className="cat-posts-category">
-                            Travel
+                            {props.categoryData.category}
                         </p>
                         <p className="cat-posts-date">
-                            / August 21 2017
+                            / {props.categoryData.date}
                         </p>
                     </div>
                 </div>

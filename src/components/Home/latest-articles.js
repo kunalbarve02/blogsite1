@@ -1,30 +1,46 @@
 import { Link } from 'react-router-dom'
 import '../../styles/latestarticles.css'
-import latestArticlesImg from './Pictures/latest-article.jpg'
+
+import {useEffect,useState} from 'react';
+import axios from 'axios'
 
 
 const Articles=()=>{
+    const[latestArticles,setlatestArticles]=useState([])
+    useEffect(()=>{
+        axios.get('https://blogsitebackend.herokuapp.com/get_latestarticles')
+        .then((res)=>{
+            setlatestArticles(res.data)
+        })
+        .catch((err)=>{
+            alert(err.message)
+        })
+    },[])
     return(
-        <Link to="/article" exact style={{ textDecoration: 'none', color:"black"}}>
+        <>
+        {latestArticles.map((item)=>(
+            <Link to={`/The-Siren/${item.category.toLowerCase()}/${item.id.toLowerCase()}`} exact style={{ textDecoration: 'none', color:"black"}}>
                 <div className="latest-article-container">
-                    <img src={latestArticlesImg} alt="" className="latest-article-img"/>
+                    <img src={item.img} alt="" className="latest-article-img"/>
                     <div className="latest-article-text-container"> 
-                        <h4 className="latest-article-text-head">Catch waves with an adventure guide</h4>
+                        <h4 className="latest-article-text-head">{item.heading}</h4>
                         <p className="latest-article-text">
-                            Gujarat is vastly underrated and it’s a mystery to us why the region isn’t more well-known as a tourist destination. It has a plethora of temples and palaces
+                            {item.desc}
                         </p>
                         <div className="latest-article-category-container">
                             <p className="latest-article-category">
-                                Travel
+                                {item.category}
                             </p>
                             <p className="latest-article-date">
-                                / August 21 2017
+                                / {item.date}
                             </p>
                         </div>
                     </div>
                     
                 </div>
-        </Link>
+            </Link>
+        ))}
+        </>
     )
 }
 export default Articles
