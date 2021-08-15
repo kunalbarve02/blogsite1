@@ -2,7 +2,7 @@
 {
     height: 100px;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-content: center;
 }
@@ -49,5 +49,6 @@
     .mobnav-container
     {
         width: 95%;
+        display: flex;
     }
 }

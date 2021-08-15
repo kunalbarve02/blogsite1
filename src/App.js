@@ -28,14 +28,13 @@ class App extends Component{
     return(
       <>
           <BrowserRouter>
-            {this.state.width<768 ?  <MobNav/>:<Navbar/>} {/* If device width is less than 768 mobile nav renders
-                                                        if it is greater than 768 normal navbar renders*/}
-              {console.log(this.state.navbar_data)}
-                  <Switch>
-                    <Route path="/The-Siren/:category" component={Categorypage} exact/>
-                    <Route path="/The-Siren/:category/:id" component={Article} exact/>
-                    <Route path="/" component={Home} exact/>
-                  </Switch>
+            <MobNav/>
+            <Navbar/>
+            <Switch>
+                <Route path="/The-Siren/:category" component={Categorypage} exact/>
+                <Route path="/The-Siren/:category/:id" component={Article} exact/>
+                <Route path="/" component={Home} exact/>
+            </Switch>
           </BrowserRouter>
       </>
     )

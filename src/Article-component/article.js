@@ -82,12 +82,12 @@ const Article=()=>{
                     </div>
                 </div>
             </div>
-        <div class="suggestion-container">
+        {<div class="suggestion-container">
             <h3 class="sugg-text">More from The Siren</h3>
             <div class="suggestion-article-container">
                 <Suggestions/>
             </div>
-        </div>
+        </div>}
         </>
     )
 }

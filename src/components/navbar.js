@@ -20,16 +20,16 @@ const Navbar =()=>{
     },[])
     return(
         <div className="navbar">
-        <div className="logo-container">
-            <img src={logo} className="logo" alt=""/>
-        </div>
-        <header className="navbar-container">
-            <ul className="navbar-list">
-                {navList.map((item)=>(
-                    <NavLink to={item.path} activeClassName="nav-active" exact><li className="navbar-tab">{item.name}</li></NavLink>
-                ))}
-            </ul>
-        </header>
+            <div className="logo-container">
+                <img src={logo} className="logo" alt=""/>
+            </div>
+            <header className="navbar-container">
+                <ul className="navbar-list">
+                    {navList.map((item)=>(
+                        <NavLink to={item.path} activeClassName="nav-active" exact><li className="navbar-tab">{item.name}</li></NavLink>
+                    ))}
+                </ul>
+            </header>
         </div>
     )
 }
