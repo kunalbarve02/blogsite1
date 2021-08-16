@@ -4,27 +4,27 @@ import '../styles/mobTabs.css'
 const navList=[
     {
         name: 'Home',
-        path:'/home',
+        path:'/',
     },
     {
         name: 'Bollywood',
-        path:'/bollywood',
+        path:'/The-Siren/bollywood',
     },
     {
         name: 'Hollywood',
-        path:'/hollywood',
+        path:'/The-Siren/hollywood',
     },
     {
         name: 'Technology',
-        path:'/technology',
+        path:'/The-Siren/technology',
     },
     {
         name: 'Fitness',
-        path:'/fitness',
+        path:'/The-Siren/fitness',
     },
     {
         name: 'Food',
-        path:'/food',
+        path:'/The-Siren/food',
     }
  ]
 
