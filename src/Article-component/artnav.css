@@ -228,6 +228,10 @@
 }
 @media only screen and (max-width:768px)
 {
+    .author-info
+    {
+        margin-top: 5%;
+    }
     .auth-img
     {
         width: 40%;
@@ -272,7 +276,7 @@
     }
     .suggestion-container 
     {
-        margin-top: 150%;
+        margin-top: 50%;
     }
     .suggestion-article-container
     {

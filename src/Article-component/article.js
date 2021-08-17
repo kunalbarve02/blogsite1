@@ -44,7 +44,7 @@ const Article=()=>{
                     <h2 className="article-heading">{article.heading}</h2>
                     <div className="article-info">
                         <div className="author-info">
-                            <img src={article.author_img} alt="Author" className="auth-img"/>
+                            <img src={article.author_img} style={{height:"70%"}} alt="Author" className="auth-img"/>
                             <div className="auth-name-container">
                                 <p className="auth-name">{article.author}</p>
                                 <p className="date">{article.posted_on}</p>
