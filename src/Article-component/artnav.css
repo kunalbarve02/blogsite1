@@ -241,9 +241,13 @@
     {
         display:none
     }
+    .article
+    {
+        width: 100vw;
+    }
     .article-container
     {
-        width: 140%;
+        width: 100vw;
     }
     .article-heading
     {
@@ -253,7 +257,8 @@
     {
         margin: 0;
         margin-left: 2%;
-        font-size:20px;
+        font-size:23px;
+        width: 100vw;
     }
     .article-info
     {
@@ -261,13 +266,14 @@
         align-content: center;
         height: 3%;
     }
-    .article-img,.article-content,.content-image
+    /*.article-img,.article-content,.content-image
     {
         width:72%;
-    }
+    }*/
     .article-img
     {
         height: 7%;
+        width: 100vw;
     }
     .tag-list
     {
@@ -276,11 +282,13 @@
     }
     .suggestion-container 
     {
-        margin-top: 50%;
+        margin-top: 0%;
+        width: 100vw;
     }
     .suggestion-article-container
     {
         flex-direction: column;
+        width: 100vw;
     }
     #sugg
     {display: none;}

@@ -28,6 +28,14 @@
 }
 @media only screen and (max-width:768px)
 {
+    .topPost
+    {
+        width: 100vw;
+    }
+    .topPost-sec
+    {
+        width: 100vw;
+    }
     .topPost-main-img
     {
         width:77%;

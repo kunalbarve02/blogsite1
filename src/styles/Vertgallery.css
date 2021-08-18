@@ -85,15 +85,20 @@
 {
     .container
     {
-        width: 315px;
+        width: 100vw;
         margin: 0;
         margin-top: 0;
         height: 350px;
     }
+    .primary-img
+    {
+        width: 100vw;
+    }
     .primary-container
     {
-        width: 100%;
+        width: 40%;
         height: 90%;
+        max-width: 375px;
     }
     .sec-parent
     {

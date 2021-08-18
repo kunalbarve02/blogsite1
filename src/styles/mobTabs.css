@@ -12,7 +12,7 @@
 }
 .tab
 {
-    width: fit-content;
+    
     height: 19px;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
@@ -20,6 +20,8 @@
     color: black;
     cursor: pointer;
     border: 0px;
+    text-align: center;
+    margin-left: 0;
 }
 .tab-nav-active
 {

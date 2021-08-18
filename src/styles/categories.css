@@ -46,8 +46,13 @@
 }
 @media only screen and (max-width:768px)
 {
+    .catpost-container
+    {
+        width: 100vw;
+    }
     .main-container
     {
         flex-direction: column;
+        width: 100vw;
     }
 }

@@ -79,6 +79,7 @@
     }
     .latest
     {
+        width: 100vw;
         flex-direction: column;
     }
     .latest-articles
